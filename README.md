@@ -1,7 +1,7 @@
 jQuery Latest News Ticker
 =========================
 
-jQuery Latest News Ticker is a Wordpress version of a flexible and easy to configure news ticker rotator plguin. The original version was developed by rhodimus and can be found at [http://www.jquerynewsticker.com/](http://www.jquerynewsticker.com/).
+jQuery Latest News Ticker is a Wordpress version of a flexible and easy to configure news ticker rotator plugin. The original version was developed by rhodimus and can be found at [http://www.jquerynewsticker.com/](http://www.jquerynewsticker.com/).
 
 Credits
 _______
