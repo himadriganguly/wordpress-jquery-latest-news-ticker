@@ -1,0 +1,107 @@
+
+
+/***********************************************************
+* General CSS
+************************************************************/
+.clrdr-post-metabox-admin-fields {
+	padding-top: 10px;
+}
+
+/* Content */
+.clrdr-post-metabox-field-content-full {
+	width: 100%;
+}
+.clrdr-post-metabox-field-content {
+	vertical-align: top;
+  	width: 80%;
+}
+.clrdr-post-metabox-appended {
+	display: inline;
+	margin-left: 20px;
+}
+
+/* Fields */
+.clrdr-post-metabox-field input[type="radio"] {
+	margin-top: -1px;
+}
+
+/* Labels */
+.clrdr-post-metabox-label {
+	vertical-align: top;
+	width: 20%;
+	overflow: hidden;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+.clrdr-post-metabox-label label {
+	display: block;
+  	font-size: 12px;
+  	font-weight: bold;
+}
+.clrdr-post-metabox-label small {
+	font-size: 10px;
+  	font-style: italic;
+}
+#side-sortables .clrdr-post-metabox-label {
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+/* Clearfix */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+
+/***********************************************************
+* List Items
+************************************************************/
+.clrdr-post-metabox-list > table {
+	width: 100%;
+}
+
+.clrdr-post-metabox-list-item > td {
+	padding-bottom: 10px;
+}
+.clrdr-post-metabox-list-item-handle {
+	cursor: move;
+}
+.clrdr-post-metabox-list input[type="text"], 
+.clrdr-post-metabox-list textarea {
+	width: 100%;
+	resize: none;
+}
+
+
+/***********************************************************
+* Radio Buttons
+************************************************************/
+.clrdr-post-metaboxer-field input[type="radio"] {
+	margin-top: -1px;
+}
+
+
+/***********************************************************
+* Code
+************************************************************/
+.clrdr-post-metabox-code pre {
+	margin: 0 0 10px 0;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #EEE;
+	white-space: normal;
+	word-break: break-all;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
