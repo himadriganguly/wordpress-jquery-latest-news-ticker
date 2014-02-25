@@ -21,7 +21,7 @@ And last but not the least Custom Post Type Helper Class tutorial which can be f
 **Installation**
 ________________
 
-The plugin can be found at - [http://wordpress.org/plugins/jquery-latest-news-ticker/]http://wordpress.org/plugins/jquery-latest-news-ticker/
+The plugin can be found at - [http://wordpress.org/plugins/jquery-latest-news-ticker/](http://wordpress.org/plugins/jquery-latest-news-ticker/)
 
 **From your WordPress dashboard**
 
