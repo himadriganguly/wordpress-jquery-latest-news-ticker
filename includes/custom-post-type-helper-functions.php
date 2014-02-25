@@ -452,6 +452,22 @@ function metabox_number( $field, $value='', $post_domain )
 	}
 }
 
+function metabox_date ( $field, $value='', $post_domain ) 
+{
+	$style = ( isset($field['style']) ) ? ' style="'.$field['style'].'"' : '';
+	$before = ( isset($field['before']) ) ? '<span>'.$field['before'].' </span>' : '';
+	$after = ( isset($field['after']) ) ? '<span> '.$field['after'].'</span>' : '';
+	
+	$output = $before.'<input class="clrdr_datepicker"'.$style.'type="text" name="'. $field['id']. '" id="'. $field['id']. '" value="'.$value.'" placeholder="dd-mm-yyyy" />'.$after;
+	
+	echo $output;
+	
+	if( $field['append'] )
+	{
+		// Add appended fields
+		metabox_append_field( $field, $post_domain );
+	}
+}
 
 /**
  * Renders an html field.

@@ -3,8 +3,8 @@ jQuery Latest News Ticker
 
 jQuery Latest News Ticker is a Wordpress version of a flexible and easy to configure news ticker rotator plugin. The original version was developed by rhodimus and can be found at [http://www.jquerynewsticker.com/](http://www.jquerynewsticker.com/).
 
-Credits
-_______
+**Credits**
+___________
 
 I would like to thank the following project developer for their contribution to the open source project. 
 
@@ -18,8 +18,10 @@ Some of the codes from Ditty News Ticker helped to develop this project.
 
 And last but not the least Custom Post Type Helper Class tutorial which can be found at [http://wp.tutsplus.com/tutorials/creative-coding/custom-post-type-helper-class/](http://wp.tutsplus.com/tutorials/creative-coding/custom-post-type-helper-class/). This tutorial helped a lot in developing this project.
 
-Installation
-____________
+**Installation**
+________________
+
+The plugin can be found at - [http://wordpress.org/plugins/jquery-latest-news-ticker/]http://wordpress.org/plugins/jquery-latest-news-ticker/
 
 **From your WordPress dashboard**
 
@@ -39,7 +41,16 @@ ____________
 5. Publish your **News Ticker**.
 6. After all the things done copy the short code from the right side and paste it within your post.
 
-CONTRIBUTE!
-___________
+**Changelog**
+_____________
+
+**1.0.1**
+* Added start and end date to ticker text
+
+**1.0.0**
+* Initial upload of jQuery Latest News Ticker - flexible and easy to configure news ticker rotator
+
+**CONTRIBUTE!**
+_______________
 
 If you'd like to commit to this project please submit a pull request and I will do my best to merge appropriately.

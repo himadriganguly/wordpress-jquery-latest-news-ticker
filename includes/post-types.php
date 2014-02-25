@@ -8,7 +8,7 @@
 	$tick_structure = array(
 								'tick' 		=> array(
 														'header' 	=> __( 'Ticker Text', $post_domain ),
-														'width' 	=> '60%',
+														'width' 	=> '30%',
 														'type' 		=> 'textarea',			
 														'rows' 		=> 2
 					  							),
@@ -16,6 +16,14 @@
 														'header'	=> __( 'Link', $post_domain ),
 														'type' 		=> 'text'
 												),
+								'st_date'	=>	array(
+														'header'	=> __( 'Start Date', $post_domain ),
+														'type'		=> 'date',														
+												),
+								'en_date'	=>	array(
+														'header'	=> __( 'End Date', $post_domain ),
+														'type'		=> 'date'
+												),	
 								'target' 	=> array(
 														'header' 	=> __('Target', $post_domain ),
 														'type' 		=> 'select',

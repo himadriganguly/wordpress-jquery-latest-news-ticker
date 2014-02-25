@@ -1,7 +1,9 @@
 /**
  * @author Himadri Ganguly
  */
-jQuery(document).ready( function($) {
+jQuery(document).ready( function($) {	
+	
+	$('.clrdr_datepicker').datepicker({ dateFormat: 'dd-mm-yy' });
 	
 	// List - set the list item order
 	function metabox_lists_set_order( $list ) {
@@ -14,9 +16,10 @@ jQuery(document).ready( function($) {
 				var base = $(this).attr('base');
 				var field = $(this).attr('field');
 				$(this).find('input,textarea,select').attr('name', base+'['+i+']['+field+']');
+				$(this).find('input,textarea,select').attr('id', base+'['+i+']['+field+']');
 			});
-		});
-	
+		});	
+				
 		// Hide the delete if only one element
 		if( $list.find('.clrdr-post-metabox-list-item').length == 1 ) {
 	
@@ -65,9 +68,11 @@ jQuery(document).ready( function($) {
 		$new.find('input,textarea,select').removeAttr('value').removeAttr('checked').removeAttr('selected');
 		$parent.after($new);
 		$new.fadeIn().css('display', 'table-row');
-		
+				
 		// Set the field order
-		metabox_lists_set_order( $(this).parents('.clrdr-post-metabox-list') );
+		metabox_lists_set_order( $(this).parents('.clrdr-post-metabox-list') );	
+		$new.find('.clrdr_datepicker').removeClass('hasDatepicker');	
+		$('.clrdr_datepicker').datepicker({ dateFormat: 'dd-mm-yy' });
 		
 		// Show the handles
 		$(this).parents('.clrdr-post-metabox-list').find('.clrdr-post-metabox-list-item-handle,.clrdr-post-metabox-list-item-delete').show();
@@ -94,6 +99,6 @@ jQuery(document).ready( function($) {
 			// Set the field order
 			metabox_lists_set_order( $list );
 		});
-	});
+	});	
 	
 });

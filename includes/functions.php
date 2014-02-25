@@ -47,12 +47,16 @@ function jquery_news_ticker( $postid='', $atts=false )
 			}
 		}
 		
+		$today = date("d-m-y"); 
+		
 		echo '<ul id="'. $tick_id . '" class="js-hidden">';
 		foreach( $meta_data['_clrdr_post_ticks'] as $i => $tick ) 
-		{				 
+		{
+									
 			if( $text = $tick['tick'] ) 
 			{
-		 		$text = convert_chars(wptexturize($text));
+					 		
+				$text = convert_chars(wptexturize($text));
 				
 				// Get the contents
 				if( $link = esc_url($tick['link']) ) 
@@ -63,8 +67,24 @@ function jquery_news_ticker( $postid='', $atts=false )
 				{
 					$contents = $text;
 				}
-				echo '<li class="news-item">'. $contents .'</li>';
-		 	}
+				if( isset( $tick['st_date'] ) && !empty( $tick['st_date'] ) && isset( $tick['en_date'] ) && !empty( $tick['en_date'] ) && $today >= $tick['st_date'] && $today <= $tick['en_date'] )		
+				{
+					echo '<li class="news-item">'. $contents. '</li>';
+				}		
+				elseif ( isset( $tick['st_date'] ) && !empty( $tick['st_date'] ) && $today >= $tick['st_date'] )		
+				{
+					echo '<li class="news-item">'. $contents .'</li>';	
+				}
+				elseif ( isset( $tick['en_date'] ) && !empty( $tick['en_date'] ) && $today <= $tick['en_date'] )
+				{
+					echo '<li class="news-item">'. $contents . '</li>';	
+				}
+				elseif ( !isset( $tick['st_date'] ) && !isset( $tick['en_date'] ) )
+				{
+					echo '<li class="news-item">'. $contents .'</li>';
+				}					
+					
+		 	}								
 		}
 		echo '</ul>';
 		?>
@@ -92,4 +112,9 @@ function jquery_news_ticker( $postid='', $atts=false )
 
 	// Return the output
 	return ob_get_clean();
+}
+
+function jquery_news_ticker_li( $text, $link='', $st_date='', $en_date='' )
+{
+	
 }

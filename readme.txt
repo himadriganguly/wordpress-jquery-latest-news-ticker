@@ -57,3 +57,6 @@ And last but not the least **Custom Post Type Helper Class** tutorial which can 
 
 = 1.0.0 =
 * Initial upload of jQuery Latest News Ticker - flexible and easy to configure news ticker rotator
+
+= 1.0.1 =
+* Added start and end date to ticker text
