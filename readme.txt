@@ -3,7 +3,7 @@ Contributors: himadriganguly
 Tags: news, news ticker, jquery, ticker, news rotator, scrolling
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,8 +55,12 @@ And last but not the least **Custom Post Type Helper Class** tutorial which can 
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial upload of jQuery Latest News Ticker - flexible and easy to configure news ticker rotator
+= 1.0.2 =
+* Fixed fatal error on installation
+* Fixed error on saving ticker text
 
 = 1.0.1 =
 * Added start and end date to ticker text
+
+= 1.0.0 =
+* Initial upload of jQuery Latest News Ticker - flexible and easy to configure news ticker rotator

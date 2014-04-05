@@ -189,7 +189,8 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 			global $metabox_data;
 			global $metabox_fields;			
 			
-			$post_type_name = $this->post_type_name;			
+			$post_type_name = $this->post_type_name;
+			$post_domain 	= $this->post_domain;			
 			
 			$metabox_data 										= $meta_box;
 			$metabox_fields[uglify( $metabox_data['title'] )] 	= $metabox_data['fields'];  		
@@ -205,7 +206,7 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 			$fields 		= $metabox_fields[uglify( $metabox_data['title'] )];
 								
 			add_action( 'admin_init',
-							function() use( $box_id, $box_title, $post_type_name, $box_context, $box_priority, $fields )
+							function() use( $box_id, $box_title, $post_type_name, $box_context, $box_priority, $fields, $post_domain  )
 							{								
 								add_meta_box(
 									$box_id,
@@ -237,7 +238,7 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 									$post_type_name,
 									$box_context,
 									$box_priority,
-									array('fields' => $fields, 'box_context' => $box_context, 'post_domain' => $this->post_domain )
+									array('fields' => $fields, 'box_context' => $box_context, 'post_domain' => $post_domain )
 								);
 							}
 						);		
@@ -280,13 +281,13 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 														
 									//update_post_meta( $post->ID, $field['id'], $data );	
 																
-									$this->update_meta_data( $post->ID, $field['id'], $field['type'], $data );
+									update_meta_data( $post->ID, $field['id'], $field['type'], $data );
 									
 									// Save appended fields
-									$this->save_appended( $post->ID, $field );
+									save_appended( $post->ID, $field );
 									
 									// Save row fields
-									$this->save_rows( $post->ID, $field );
+									save_rows( $post->ID, $field );
 									
 								}
 							}
@@ -294,10 +295,12 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 					}
 				}
 			);			
-		}
+		}	
 		
-		/* Method to update individual field */
-		private function update_meta_data( $post_id, $id, $type, $data ) 
+	} // end of Class
+	
+	/* Method to update individual field */
+		function update_meta_data( $post_id, $id, $type, $data ) 
 		{  	
 		  	// Update the post meta
 		  	update_post_meta( $post_id, $id, $data );		 
@@ -305,7 +308,7 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 		}   
 		
 		/* Method to update row fields */
-		private function save_rows( $post_id, $field ) 
+		function save_rows( $post_id, $field ) 
 		{			
 			if( isset($field['rows']) ) 
 			{
@@ -327,7 +330,7 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 		}
 		
 		/* Method to update appended fields */
-		private function save_appended( $post_id, $field ) 
+		function save_appended( $post_id, $field ) 
 		{
 
 			if( isset($field['append']) ) 
@@ -338,11 +341,9 @@ if( !class_exists('ColorDrift_Post_Type') ) {
 					$data = ( isset($_POST[$id]) ) ? $_POST[$id] : '';
 					
 					// Update the meta
-					$this->update_meta_data( $post_id, $id, $append['type'], $data );
+					update_meta_data( $post_id, $id, $append['type'], $data );
 				}
 			}
 		}
-		
-	} // end of Class
 	
 } // end of if condition

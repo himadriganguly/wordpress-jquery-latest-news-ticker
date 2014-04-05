@@ -79,7 +79,7 @@ function jquery_news_ticker( $postid='', $atts=false )
 				{
 					echo '<li class="news-item">'. $contents . '</li>';	
 				}
-				elseif ( !isset( $tick['st_date'] ) && !isset( $tick['en_date'] ) )
+				elseif ( empty( $tick['st_date'] ) && empty( $tick['en_date'] ) )
 				{
 					echo '<li class="news-item">'. $contents .'</li>';
 				}					

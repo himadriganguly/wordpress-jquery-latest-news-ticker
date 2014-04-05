@@ -188,7 +188,7 @@ function metabox_list( $field, $values='', $post_domain )
 
 	echo $output;
 	
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -263,7 +263,7 @@ function metabox_text( $field, $value='', $post_domain )
 	
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -286,7 +286,7 @@ function metabox_textarea( $field, $value='', $post_domain )
 	
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -334,7 +334,7 @@ function metabox_select( $field, $value='', $post_domain )
 
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -386,7 +386,7 @@ function metabox_checkbox( $field, $value='', $post_domain )
 
 	echo $before.$output.$after;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -423,7 +423,7 @@ function metabox_radio( $field, $value='', $post_domain )
 
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -445,7 +445,7 @@ function metabox_number( $field, $value='', $post_domain )
 	
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -462,7 +462,7 @@ function metabox_date ( $field, $value='', $post_domain )
 	
 	echo $output;
 	
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -480,7 +480,7 @@ function metabox_html( $field, $value='', $post_domain )
 	// Echo the html
 	echo $value;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -515,7 +515,7 @@ function metabox_toggle( $field, $value='', $post_domain )
 		echo $output;
 	}
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -582,7 +582,7 @@ function metabox_sort( $field, $value='', $post_domain )
 
 	echo $output;
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );
@@ -602,7 +602,7 @@ function metabox_wysiwyg( $field, $value='', $post_domain )
 	$settings['textarea_rows'] = ( isset($field['rows']) ) ? $field['rows'] : 12;
 	wp_editor( $value, $field['id'], $settings );
 
-	if( $field['append'] )
+	if( isset($field['append']) )
 	{
 		// Add appended fields
 		metabox_append_field( $field, $post_domain );

@@ -158,7 +158,7 @@
 											'name' 			=> __( 'Shortcode', $post_domain ),
 											'shortcode'		=> 'jquery_latest_news_ticker',
 											'button' 		=> __( 'Select Shortcode', $post_domain ),
-											'description' 	=> __( 'Use this shortcode to insert the jQuery News Ticker into a post/page.', $post_domina ),
+											'description' 	=> __( 'Use this shortcode to insert the jQuery News Ticker into a post/page.', $post_domain ),
 									);
 	
 	// Create the metabox

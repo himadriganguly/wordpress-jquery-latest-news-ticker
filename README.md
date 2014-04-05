@@ -44,6 +44,10 @@ The plugin can be found at - [http://wordpress.org/plugins/jquery-latest-news-ti
 **Changelog**
 _____________
 
+**1.0.2**
+* Fixed fatal error on installation
+* Fixed error on saving ticker text
+
 **1.0.1**
 * Added start and end date to ticker text
 
